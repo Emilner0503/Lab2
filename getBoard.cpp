@@ -7,14 +7,19 @@
 #include "getBoard.h"
 using namespace std;
 
-string getBoard(int playerXPosition)
+string getBoard(int playerXPosition, vector<int> obstacles)
 {
-    string board = "B";
+    string board;
+    board = "B";
     for(int i=1; i<30;i++)
     {
      if(playerXPosition == i)
      {
          board+= "P";
+     }
+     if(obstacles[i] == 1)
+     {
+         board+= "0";
      }
      else
      {
