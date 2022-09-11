@@ -19,6 +19,7 @@ string getBoard(int playerXPosition, vector<int> obstacles)
      }
      if(obstacles[i] == 1)
      {
+         cout<<"yo";
          board+= "0";
      }
      else

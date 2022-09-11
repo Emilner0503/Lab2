@@ -13,12 +13,13 @@ int main() {
     bool wrong;
     vector<int> obstacles;
     obstacles.resize(28);
-    int counter = 0;
+    int counter = 3;
     while(end)
     {
-        if (!(counter%3))
+        if (counter == 3)
         {
             obstacles[28] = 1;
+            counter = 0;
         }
         else
         {
