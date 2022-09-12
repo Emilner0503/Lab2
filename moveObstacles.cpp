@@ -7,7 +7,7 @@
 using namespace std;
 void moveObstacles(vector<int>& obstacles)
 {
-    for(int i=0; i< obstacles.size();i++)
+    for(int i=0; i< obstacles.size()+1;i++)
     {
         if(obstacles[i] == 1)
         {

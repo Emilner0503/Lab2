@@ -7,11 +7,11 @@
 #include "getBoard.h"
 using namespace std;
 
-string getBoard(int playerXPosition, vector<int> obstacles)
+string getBoard(int playerXPosition, vector<int>& obstacles)
 {
     string board;
     board = "B";
-    for(int i=1; i<30;i++)
+    for(int i=0; i<29;i++)
     {
      if(playerXPosition == i)
      {
@@ -19,7 +19,6 @@ string getBoard(int playerXPosition, vector<int> obstacles)
      }
      if(obstacles[i] == 1)
      {
-         cout<<"yo";
          board+= "0";
      }
      else
@@ -28,10 +27,10 @@ string getBoard(int playerXPosition, vector<int> obstacles)
      }
     }
     board+= "E\n";
-    for(int i=0; i<31;i++)
+    for(int i=0; i<32;i++)
     {
         board += "X";
     }
-
+    board+="\n";
     return board;
 }
